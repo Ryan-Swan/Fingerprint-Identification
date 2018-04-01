@@ -1,24 +1,10 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is the web interface part of the application. Contained is a Rails application.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# Instalation
+* Install Ruby on Rails and its dependencies
+* Install mysql & its gem
+* Run db:create
+* Run db:migrate
+* Run rails server
