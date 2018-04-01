@@ -111,3 +111,93 @@ FingerprintChannel is streaming from fingerprint_channel
 FingerprintChannel#scan({"message"=>"Message"})
 [ActionCable] Broadcasting to fingerprint_channel: {:message=>"Message"}
 FingerprintChannel transmitting {"message"=>"Message"} (via streamed from fingerprint_channel)
+Started GET "/cable" for 192.168.0.113 at 2018-04-01 09:09:00 +0400
+Cannot render console from 192.168.0.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/cable/" [WebSocket] for 192.168.0.113 at 2018-04-01 09:09:00 +0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+FingerprintChannel is transmitting the subscription confirmation
+FingerprintChannel is streaming from fingerprint_channel
+Started GET "/home/index" for 192.168.0.113 at 2018-04-01 09:09:02 +0400
+Cannot render console from 192.168.0.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 224ms (Views: 218.0ms)
+
+
+Finished "/cable/" [WebSocket] for 192.168.0.113 at 2018-04-01 09:09:02 +0400
+FingerprintChannel stopped streaming from fingerprint_channel
+Started GET "/cable" for 192.168.0.113 at 2018-04-01 09:09:02 +0400
+Cannot render console from 192.168.0.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/cable/" [WebSocket] for 192.168.0.113 at 2018-04-01 09:09:02 +0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+FingerprintChannel is transmitting the subscription confirmation
+FingerprintChannel is streaming from fingerprint_channel
+Started GET "/cable" for 192.168.0.113 at 2018-04-01 09:09:04 +0400
+Cannot render console from 192.168.0.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/cable/" [WebSocket] for 192.168.0.113 at 2018-04-01 09:09:04 +0400
+Request origin not allowed: 
+Failed to upgrade to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Finished "/cable/" [WebSocket] for 192.168.0.113 at 2018-04-01 09:09:04 +0400
+Started GET "/cable" for 192.168.0.113 at 2018-04-01 09:12:46 +0400
+Cannot render console from 192.168.0.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/cable/" [WebSocket] for 192.168.0.113 at 2018-04-01 09:12:46 +0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+FingerprintChannel is transmitting the subscription confirmation
+FingerprintChannel is streaming from fingerprint_channel
+Started GET "/home/index" for 192.168.0.113 at 2018-04-01 09:12:47 +0400
+Cannot render console from 192.168.0.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 253ms (Views: 240.5ms)
+
+
+Finished "/cable/" [WebSocket] for 192.168.0.113 at 2018-04-01 09:12:47 +0400
+FingerprintChannel stopped streaming from fingerprint_channel
+Started GET "/cable" for 192.168.0.113 at 2018-04-01 09:12:47 +0400
+Cannot render console from 192.168.0.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/cable/" [WebSocket] for 192.168.0.113 at 2018-04-01 09:12:47 +0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+FingerprintChannel is transmitting the subscription confirmation
+FingerprintChannel is streaming from fingerprint_channel
+Started GET "/cable" for 192.168.0.113 at 2018-04-01 09:12:53 +0400
+Cannot render console from 192.168.0.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/cable/" [WebSocket] for 192.168.0.113 at 2018-04-01 09:12:53 +0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+FingerprintChannel is transmitting the subscription confirmation
+FingerprintChannel is streaming from fingerprint_channel
+FingerprintChannel#scan({"message"=>"this is a message!!!!"})
+[ActionCable] Broadcasting to fingerprint_channel: {:message=>"this is a message!!!!"}
+FingerprintChannel transmitting {"message"=>"this is a message!!!!"} (via streamed from fingerprint_channel)
+FingerprintChannel transmitting {"message"=>"this is a message!!!!"} (via streamed from fingerprint_channel)
+FingerprintChannel#scan({"message"=>"this is a message!!!!"})
+[ActionCable] Broadcasting to fingerprint_channel: {:message=>"this is a message!!!!"}
+FingerprintChannel transmitting {"message"=>"this is a message!!!!"} (via streamed from fingerprint_channel)
+FingerprintChannel transmitting {"message"=>"this is a message!!!!"} (via streamed from fingerprint_channel)
+FingerprintChannel#scan({"message"=>"this is a message!!!!"})
+[ActionCable] Broadcasting to fingerprint_channel: {:message=>"this is a message!!!!"}
+FingerprintChannel transmitting {"message"=>"this is a message!!!!"} (via streamed from fingerprint_channel)
+FingerprintChannel transmitting {"message"=>"this is a message!!!!"} (via streamed from fingerprint_channel)
+Finished "/cable/" [WebSocket] for 192.168.0.113 at 2018-04-01 09:13:23 +0400
+FingerprintChannel stopped streaming from fingerprint_channel
+Started GET "/cable" for 192.168.0.113 at 2018-04-01 09:15:05 +0400
+Cannot render console from 192.168.0.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/cable/" [WebSocket] for 192.168.0.113 at 2018-04-01 09:15:05 +0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+FingerprintChannel is transmitting the subscription confirmation
+FingerprintChannel is streaming from fingerprint_channel
+FingerprintChannel#scan({"message"=>"this is a message!!!!"})
+[ActionCable] Broadcasting to fingerprint_channel: {:message=>"this is a message!!!!"}
+FingerprintChannel transmitting {"message"=>"this is a message!!!!"} (via streamed from fingerprint_channel)
+FingerprintChannel transmitting {"message"=>"this is a message!!!!"} (via streamed from fingerprint_channel)
+FingerprintChannel#scan({"message"=>"this is a message!!!!"})
+[ActionCable] Broadcasting to fingerprint_channel: {:message=>"this is a message!!!!"}
+FingerprintChannel transmitting {"message"=>"this is a message!!!!"} (via streamed from fingerprint_channel)
+FingerprintChannel transmitting {"message"=>"this is a message!!!!"} (via streamed from fingerprint_channel)
+FingerprintChannel#scan({"message"=>"this is a message!!!!"})
+[ActionCable] Broadcasting to fingerprint_channel: {:message=>"this is a message!!!!"}
+FingerprintChannel transmitting {"message"=>"this is a message!!!!"} (via streamed from fingerprint_channel)
+FingerprintChannel transmitting {"message"=>"this is a message!!!!"} (via streamed from fingerprint_channel)
+Finished "/cable/" [WebSocket] for 192.168.0.113 at 2018-04-01 09:15:27 +0400
+FingerprintChannel stopped streaming from fingerprint_channel
