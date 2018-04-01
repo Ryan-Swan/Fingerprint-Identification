@@ -4,24 +4,51 @@
 	<div class="ui divider"></div>
 	<div class="ui segment">
 		<div class="ui two column grid">
-			<div class="ui column">
+			<div class="ui center column">
 
-				<i class="ui hand pointer icon"></i>
+				
 				<% if params["scanned"] != "true" %>
-				<div class="ui label">Waiting for fingerprint</div>
+					<div class="waiting-for-fingerprint">
+						<i class="ui massive hand pointer icon"></i>
+						<div>
+							<div class="ui label">Waiting for fingerprint</div>
+						</div>
+					</div>
 				<% else %>
-				<%= image_tag "outputimage.png" %>
-				<div class="ui label">Waiting for match</div>
-				<%= params["scanned"] %>
+					<div class="waiting-for-match">
+						<%= image_tag "outputimage.png" %>
+						<div>
+							<div class="ui block  label">Waiting for match</div>
+						</div>
+					</div>
 				<% end %>
 			</div>
-			<div class="ui column">
-				<i class="ui unlock icon"></i>
-				<div class="ui label">Door unlocked</div>
+			<div class="ui center column">
+				<div class="door-unlocked">
+					<i class="ui massive unlock icon"></i>
+					<div>
+						<div class="ui block label">Door unlocked</div>
+					</div>				
+				</div>
+				<div class="door-locked">
+					<i class="ui massive lock icon"></i>
+					<div>
+						<div class="ui block label">Door locked</div>
+					</div>
+				</div>
 			</div>
 		</div>
-		<% if params["loading"] == "true" %>
-			<div class="ui active inline loader"></div>
-		<% end %>
+		<div class="ui active inline loader"></div>
 	</div>
 </div>
+<style>
+	/*.waiting-for-fingerprint, .waiting-for-match, .door-unlocked, .door-locked {
+		text-align:center;
+	}*/
+	.column.center {text-align:center !important;}
+	.block {display:block;}
+</style>
+<script>
+	$(".door-locked").hide()
+	$(".door-unlocked").hide()
+</script>

@@ -24,14 +24,24 @@ App.fingerprint = App.cable.subscriptions.create("FingerprintChannel", {
     	if(findGetParameter("scanned") != "true") {
         	window.location = "/fingerprints?scanned=true&loading=true";
     	}
-        else 
+        else {
         	document.getElementsByTagName("img")[0].src= "/assets/outputimage.png?" + Date.now()
-	        
-    else if(data['message'] == "Valid authentication")
+	}        
+    else if(data['message'] == "Valid authentication") {
         console.log("Valid!");
+        $(".door-locked").hide()
+        $(".door-unlocked").show()
+        $(".loader").hide()
+        window.location = "/fingerprints"
+    }
         
-    else if(data['message'] == "Invalid authentication")
+    else if(data['message'] == "Invalid authentication") {
         console.log("InValid!");
+        $(".door-unlocked").hide()
+        $(".door-locked").show()
+        $(".loader").hide()
+
+    }
   },
 
   scan(message) {
