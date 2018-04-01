@@ -5,14 +5,23 @@
 	<div class="ui segment">
 		<div class="ui two column grid">
 			<div class="ui column">
+
 				<i class="ui hand pointer icon"></i>
+				<% if params["scanned"] != "true" %>
 				<div class="ui label">Waiting for fingerprint</div>
+				<% else %>
+				<%= image_tag "outputimage.png" %>
+				<div class="ui label">Waiting for match</div>
+				<%= params["scanned"] %>
+				<% end %>
 			</div>
 			<div class="ui column">
 				<i class="ui unlock icon"></i>
 				<div class="ui label">Door unlocked</div>
 			</div>
 		</div>
-		<div class="ui active inline loader"></div>
+		<% if params["loading"] == "true" %>
+			<div class="ui active inline loader"></div>
+		<% end %>
 	</div>
 </div>
