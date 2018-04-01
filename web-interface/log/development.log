@@ -279,3 +279,103 @@ puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
 puma (3.11.3) lib/puma/server.rb:438:in `process_client'
 puma (3.11.3) lib/puma/server.rb:302:in `block in run'
 puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/home/index" for 192.168.0.113 at 2018-04-01 21:58:55 +0400
+Cannot render console from 192.168.0.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 438ms (Views: 300.1ms)
+
+
+Started GET "/cable" for 192.168.0.113 at 2018-04-01 21:58:55 +0400
+Cannot render console from 192.168.0.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/cable/" [WebSocket] for 192.168.0.113 at 2018-04-01 21:58:55 +0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+FingerprintChannel is transmitting the subscription confirmation
+FingerprintChannel is streaming from fingerprint_channel
+Started GET "/home/index" for 192.168.0.113 at 2018-04-01 22:00:53 +0400
+Cannot render console from 192.168.0.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 11ms (Views: 10.7ms)
+
+
+Finished "/cable/" [WebSocket] for 192.168.0.113 at 2018-04-01 22:00:53 +0400
+FingerprintChannel stopped streaming from fingerprint_channel
+Started GET "/cable" for 192.168.0.113 at 2018-04-01 22:00:53 +0400
+Cannot render console from 192.168.0.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/cable/" [WebSocket] for 192.168.0.113 at 2018-04-01 22:00:53 +0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+FingerprintChannel is transmitting the subscription confirmation
+FingerprintChannel is streaming from fingerprint_channel
+Started GET "/home/index" for 192.168.0.113 at 2018-04-01 22:02:17 +0400
+Cannot render console from 192.168.0.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 31ms (Views: 30.7ms)
+
+
+Finished "/cable/" [WebSocket] for 192.168.0.113 at 2018-04-01 22:02:17 +0400
+FingerprintChannel stopped streaming from fingerprint_channel
+Started GET "/cable" for 192.168.0.113 at 2018-04-01 22:02:17 +0400
+Cannot render console from 192.168.0.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/cable/" [WebSocket] for 192.168.0.113 at 2018-04-01 22:02:17 +0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+FingerprintChannel is transmitting the subscription confirmation
+FingerprintChannel is streaming from fingerprint_channel
+Started GET "/home/index" for 192.168.0.113 at 2018-04-01 22:04:55 +0400
+Cannot render console from 192.168.0.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 139ms (Views: 138.2ms)
+
+
+Started GET "/cable" for 192.168.0.113 at 2018-04-01 22:04:56 +0400
+Cannot render console from 192.168.0.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/cable/" [WebSocket] for 192.168.0.113 at 2018-04-01 22:04:56 +0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+FingerprintChannel is transmitting the subscription confirmation
+FingerprintChannel is streaming from fingerprint_channel
+Started GET "/fingerprints" for 192.168.0.113 at 2018-04-01 22:04:56 +0400
+Cannot render console from 192.168.0.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by FingerprintsController#index as HTML
+  Rendering fingerprints/index.html.erb within layouts/application
+  Rendered fingerprints/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 38ms (Views: 36.9ms)
+
+
+Started GET "/fingerprints" for 192.168.0.113 at 2018-04-01 22:09:26 +0400
+Cannot render console from 192.168.0.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by FingerprintsController#index as HTML
+  Rendering fingerprints/index.html.erb within layouts/application
+  Rendered fingerprints/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 17ms (Views: 15.8ms)
+
+
+Finished "/cable/" [WebSocket] for 192.168.0.113 at 2018-04-01 22:09:26 +0400
+FingerprintChannel stopped streaming from fingerprint_channel
+Started GET "/cable" for 192.168.0.113 at 2018-04-01 22:09:26 +0400
+Cannot render console from 192.168.0.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/cable/" [WebSocket] for 192.168.0.113 at 2018-04-01 22:09:26 +0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+FingerprintChannel is transmitting the subscription confirmation
+FingerprintChannel is streaming from fingerprint_channel
+Started GET "/fingerprints" for 192.168.0.113 at 2018-04-01 22:10:10 +0400
+Cannot render console from 192.168.0.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by FingerprintsController#index as HTML
+  Rendering fingerprints/index.html.erb within layouts/application
+  Rendered fingerprints/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 26ms (Views: 25.7ms)
+
+
+Finished "/cable/" [WebSocket] for 192.168.0.113 at 2018-04-01 22:10:10 +0400
+FingerprintChannel stopped streaming from fingerprint_channel
+Started GET "/cable" for 192.168.0.113 at 2018-04-01 22:10:11 +0400
+Cannot render console from 192.168.0.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/cable/" [WebSocket] for 192.168.0.113 at 2018-04-01 22:10:11 +0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+FingerprintChannel is transmitting the subscription confirmation
+FingerprintChannel is streaming from fingerprint_channel
