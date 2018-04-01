@@ -1,0 +1,14 @@
+I"9(function() {
+  App.fingerprint = App.cable.subscriptions.create("FingerprintChannel", {
+    connected: function() {},
+    disconnected: function() {},
+    received: function(data) {
+      return alert(data['message']);
+    },
+    scan: function() {
+      return this.perform('scan');
+    }
+  });
+
+}).call(this);
+:ET

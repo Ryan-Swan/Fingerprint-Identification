@@ -7,6 +7,7 @@ App.fingerprint = App.cable.subscriptions.create "FingerprintChannel",
 
   received: (data) ->
     # Called when there's incoming data on the websocket for this channel
+    alert data['message']
 
-  scan: ->
-    @perform 'scan'
+  scan: (message) ->
+    @perform 'scan', message: message

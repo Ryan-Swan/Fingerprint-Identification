@@ -8,7 +8,9 @@ class FingerprintChannel < ApplicationCable::Channel
   end
 
   def scan(data)
-  	ActionCable.server.broadcast('messages',
-      message: render_message(data['message']))
+  	ActionCable.server.broadcast(
+  		'fingerprint_channel', 
+  		message: data['message']
+  	)
   end
 end
