@@ -15,7 +15,7 @@
  */
 .column.center {text-align:center !important;}
 	.block {display:block;}
-	.title.icon {margin-bottom:20px !important; font-size:1500% !important;}
+	.status.icon {margin-bottom:20px !important; font-size:1500% !important;}
 	.status {margin:20px;}
 	.test {border-radius:5px;max-height: 210px;margin-bottom: 20px;}
 	.header {margin:10px; margin-top:25px !important;}
