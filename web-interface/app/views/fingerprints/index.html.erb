@@ -1,54 +1,49 @@
 <div class="ui container">
-	<h2>Computer Science lab</h2>
-	<h4>Fingerprint authentication</h4>
+	<div class="ui  segment header">
+		<h2>Computer Science lab</h2>
+		<h4>Fingerprint authentication</h4>
+	</div>
 	<div class="ui divider"></div>
-	<div class="ui segment">
+	<div class="ui raised segment">
 		<div class="ui two column grid">
 			<div class="ui center column">
-
-				
-				<% if params["scanned"] != "true" %>
-					<div class="waiting-for-fingerprint">
-						<i class="ui massive hand pointer icon"></i>
-						<div>
-							<div class="ui label">Waiting for fingerprint</div>
-						</div>
+				<div class="status waiting-for-fingerprint">
+					<i class="ui title hand pointer icon"></i>
+					<div>
+						<div class="ui label">Waiting for fingerprint</div>
 					</div>
-				<% else %>
-					<div class="waiting-for-match">
-						<%= image_tag "outputimage.png" %>
-						<div>
-							<div class="ui block  label">Waiting for match</div>
-						</div>
+				</div>
+				<div class="status waiting-for-match">
+					<%= image_tag "outputimage.png", class: "test" %>
+					<div>
+						<div class="ui orange waiting label">Waiting for match</div>
 					</div>
-				<% end %>
+				</div>
 			</div>
 			<div class="ui center column">
-				<div class="door-unlocked">
-					<i class="ui massive unlock icon"></i>
+				<div class="status door-unlocked">
+					<i class="ui title unlock icon"></i>
 					<div>
-						<div class="ui block label">Door unlocked</div>
+						<div class="ui green label">Door unlocked</div>
 					</div>				
 				</div>
-				<div class="door-locked">
-					<i class="ui massive lock icon"></i>
+				<div class="status door-locked">
+					<i class="ui title lock icon"></i>
 					<div>
-						<div class="ui block label">Door locked</div>
+						<div class="ui red label">Door locked</div>
 					</div>
 				</div>
 			</div>
 		</div>
 		<div class="ui active inline loader"></div>
 	</div>
+	<div class="ui blue message waiting-for-fingerprint">
+		Place your finger on the fingerprint scanner
+	</div>
 </div>
-<style>
-	/*.waiting-for-fingerprint, .waiting-for-match, .door-unlocked, .door-locked {
-		text-align:center;
-	}*/
-	.column.center {text-align:center !important;}
-	.block {display:block;}
-</style>
 <script>
+	$(".waiting-for-match").hide()
 	$(".door-locked").hide()
 	$(".door-unlocked").hide()
+	$(".loader").hide()
 </script>
