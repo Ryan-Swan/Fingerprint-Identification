@@ -1,2 +1,98 @@
-<h1>Bookings#new</h1>
-<p>Find me in app/views/bookings/new.html.erb</p>
+<script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+
+ 
+<!-- Include Date Range Picker -->
+<script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
+<div class="ui container">
+	<div class="ui  segment header">
+		<h2>Computer Science lab</h2>
+		<h4>Make booking</h4>
+	</div>
+	<div class="ui segment">
+		<div class="ui form">
+			
+			<div class="ui field">
+				<div><label>Time between: </label></div>
+				<input name="start"/>
+			</div>
+			<div class="ui field">
+				<label>Permissions</label>
+				<div class="ui selection dropdown">
+					<input type="hidden" name="gender">
+					<i class="dropdown icon"></i>
+					<div class="default text">Permissions</div>
+					<div class="menu">
+						<div class="item" data-value="1">Default</div>
+						<div class="item" data-value="1">Default - Non Anonymous</div>
+						<div class="item" data-value="1">Exam style</div>
+						<div class="item" data-value="1">Staff only</div>
+					</div>
+				</div>
+			</div>
+			<div class="ui field">
+				<label>Student group</label>
+				<div class="ui search selection dropdown">
+					<input type="hidden" name="gender">
+					<i class="dropdown icon"></i>
+					<div class="default text">Student group</div>
+					<div class="menu">
+						<div class="item" data-value="1">First years</div>
+						<div class="item" data-value="1">Second years</div>
+						<div class="item" data-value="1">Third years</div>
+						<div class="item" data-value="1">G52OSC</div>
+						<div class="item" data-value="1">G52AFP</div>
+					</div>
+				</div>
+			</div>
+			<div class="ui field">
+				<div class="ui checkbox">
+					<input type="checkbox" name="example">
+					<label>Make this a recurring booking</label>
+				</div>
+			</div>
+			<div class="ui inline fields segment">
+				<div class="ui inline field">
+					<label>Every</label>
+					<div class="ui search selection dropdown">
+						<input type="hidden" name="gender">
+						<i class="dropdown icon"></i>
+						<div class="default text">Peroid of time</div>
+						<div class="menu">
+							<div class="item" data-value="1">Day</div>
+							<div class="item" data-value="1">Week</div>
+							<div class="item" data-value="1">Month</div>
+						</div>
+					</div>
+				</div>
+				<div class="ui inline field">
+					<label>For</label>
+					<input style="width:5em" type="number" />
+					<label> Weeks?</label>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+	<div class="ui submit field">
+				<div class="ui red button">Submit</div>
+			</div>
+</div>
+<script>
+	$('input[name=start]').daterangepicker({
+    "timePicker": true,
+    "startDate": "03/28/2018",
+    "endDate": "04/03/2018",
+    "buttonClasses": "ui tiny button",
+    "applyClass": "green",
+    "cancelClass": "red",
+    "locale": {
+            "format": 'MM/DD/YYYY h:mm A'
+        }
+}, function(start, end, label) {
+  console.log('New date range selected: ' + start.format('MM/DD/YYYY h:mm A') + ' to ' + end.format('MM/DD/YYYY h:mm A'));
+});
+	$(".dropdown").dropdown()
+	$(".checkbox").checkbox()
+</script>

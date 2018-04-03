@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   get 'bookings/index'
 
   get 'bookings/new'
@@ -8,6 +9,6 @@ Rails.application.routes.draw do
   get 'bookings/delete'
 
   get 'fingerprints/', to: 'fingerprints#index'
-  get 'home/index'
+  root to: 'home#index'
   mount ActionCable.server => '/cable'
 end
