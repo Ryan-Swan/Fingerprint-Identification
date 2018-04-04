@@ -1,13 +1,13 @@
+<%= render partial: "menubar" %>
 <div class="ui container">
 	<div class="ui  segment header">
 		<h2>Computer Science lab</h2>
 		<h4>Room bookings and authentication management</h4>
-		
 	</div>
 	<div class="ui divider"></div>
 	<div style="text-align:right">
 		<div class="ui left labeled button" tabindex="0">
-			<a class="ui basic label">
+			<a href="/bookings/new" class="ui basic label">
 				Add booking
 			</a>
 			<div class="ui icon button">
@@ -26,22 +26,16 @@
 	</div>
 	<div class="ui segment">
 		<div class="ui seven column divided grid">
+			<% @bookings.each do |bookings| %>
 			<div class="ui column">
-				<div class="ui disabled booking label">9am to 10am</div>
-				<div class="ui red booking label">10am to 12pm</div>
-				<div class="ui yellow booking label">12pm to 1pm</div>
-				<div class="ui blue booking label">2pm to 4pm</div>
-				
+				<% bookings.each do |booking| %>
+					<div class="ui <%= booking_colour booking %> booking  label">
+					 <%= booking.start.strftime("%H:%M") %> to 
+					 <%= booking.end.strftime("%H:%M") %>
+					</div>
+				<% end %>
 			</div>
-			<div class="ui column"></div>
-			<div class="ui column"></div>
-			<div class="ui column">
-				<div class="ui yellow booking label">12pm to 1pm</div>
-			</div>
-			<div class="ui column"></div>
-			<div class="ui column"></div>
-			<div class="ui column"></div>
+			<% end %>
 		</div>
-
 	</div>
 </div>

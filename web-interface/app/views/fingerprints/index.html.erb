@@ -40,6 +40,11 @@
 	<div class="ui blue message waiting-for-fingerprint">
 		Place your finger on the fingerprint scanner
 	</div>
+	<% if Booking.current_booking %>
+	<div class="ui message">
+		Booking ends in <%= distance_of_time_in_words(Booking.current_booking.end.to_datetime, Time.zone.now.to_datetime) %>
+	</div>
+	<% end %>
 </div>
 <script>
 	$(".waiting-for-match").hide()

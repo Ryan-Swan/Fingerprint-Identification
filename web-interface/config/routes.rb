@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
+  get 'user_groups/index'
+  post 'user_groups/', to: 'user_groups#create'
+  get 'user_groups/new'
+
   devise_for :users
-  get 'bookings/index'
+  get 'bookings/', to: 'bookings#index'
+  post 'bookings/', to: 'bookings#create'
 
   get 'bookings/new'
 
