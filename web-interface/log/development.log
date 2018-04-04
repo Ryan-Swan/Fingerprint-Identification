@@ -37243,3 +37243,283 @@ Started GET "/cable/" [WebSocket] for 192.168.0.113 at 2018-04-04 04:17:04 +0400
 Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
 FingerprintChannel is transmitting the subscription confirmation
 FingerprintChannel is streaming from fingerprint_channel
+Started GET "/fingerprints" for 192.168.0.113 at 2018-04-04 04:21:58 +0400
+Cannot render console from 192.168.0.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by FingerprintsController#index as HTML
+  Rendering fingerprints/index.html.erb within layouts/application
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT `bookings`.* FROM `bookings`[0m
+  Rendered fingerprints/index.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 38ms (Views: 36.9ms | ActiveRecord: 0.1ms)
+
+
+Finished "/cable/" [WebSocket] for 192.168.0.113 at 2018-04-04 04:21:58 +0400
+FingerprintChannel stopped streaming from fingerprint_channel
+Started GET "/cable" for 192.168.0.113 at 2018-04-04 04:21:58 +0400
+Cannot render console from 192.168.0.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/cable/" [WebSocket] for 192.168.0.113 at 2018-04-04 04:21:58 +0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+FingerprintChannel is transmitting the subscription confirmation
+FingerprintChannel is streaming from fingerprint_channel
+Started GET "/fingerprints" for 192.168.0.113 at 2018-04-04 04:26:28 +0400
+Cannot render console from 192.168.0.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by FingerprintsController#index as HTML
+  Rendering fingerprints/index.html.erb within layouts/application
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT `bookings`.* FROM `bookings`[0m
+  Rendered fingerprints/index.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 56ms (Views: 55.3ms | ActiveRecord: 0.1ms)
+
+
+Finished "/cable/" [WebSocket] for 192.168.0.113 at 2018-04-04 04:26:28 +0400
+FingerprintChannel stopped streaming from fingerprint_channel
+Started GET "/cable" for 192.168.0.113 at 2018-04-04 04:26:28 +0400
+Cannot render console from 192.168.0.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/cable/" [WebSocket] for 192.168.0.113 at 2018-04-04 04:26:28 +0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+FingerprintChannel is transmitting the subscription confirmation
+FingerprintChannel is streaming from fingerprint_channel
+Started GET "/bookings/new" for 192.168.0.113 at 2018-04-04 04:26:34 +0400
+Cannot render console from 192.168.0.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BookingsController#new as HTML
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering bookings/new.html.erb within layouts/application
+  Rendered bookings/_menubar.html.erb (0.2ms)
+  [1m[36mUserGroup Load (0.4ms)[0m  [1m[34mSELECT `user_groups`.* FROM `user_groups`[0m
+  Rendered bookings/new.html.erb within layouts/application (27.5ms)
+Completed 200 OK in 100ms (Views: 70.1ms | ActiveRecord: 4.7ms)
+
+
+Finished "/cable/" [WebSocket] for 192.168.0.113 at 2018-04-04 04:26:34 +0400
+FingerprintChannel stopped streaming from fingerprint_channel
+Started GET "/cable" for 192.168.0.113 at 2018-04-04 04:26:34 +0400
+Cannot render console from 192.168.0.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/cable/" [WebSocket] for 192.168.0.113 at 2018-04-04 04:26:34 +0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+FingerprintChannel is transmitting the subscription confirmation
+FingerprintChannel is streaming from fingerprint_channel
+Started GET "/bookings" for 192.168.0.113 at 2018-04-04 04:26:39 +0400
+Cannot render console from 192.168.0.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BookingsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering bookings/index.html.erb within layouts/application
+  Rendered bookings/_menubar.html.erb (0.3ms)
+  [1m[36mBooking Load (2.0ms)[0m  [1m[34mSELECT `bookings`.* FROM `bookings` WHERE (`bookings`.`start` BETWEEN '2018-04-02 00:00:00' AND '2018-04-02 23:59:59') AND (`bookings`.`end` BETWEEN '2018-04-02 00:00:00' AND '2018-04-02 23:59:59')[0m
+  [1m[36mBooking Load (0.5ms)[0m  [1m[34mSELECT `bookings`.* FROM `bookings` WHERE (`bookings`.`start` BETWEEN '2018-04-03 00:00:00' AND '2018-04-03 23:59:59') AND (`bookings`.`end` BETWEEN '2018-04-03 00:00:00' AND '2018-04-03 23:59:59')[0m
+  [1m[36mBooking Load (0.4ms)[0m  [1m[34mSELECT `bookings`.* FROM `bookings` WHERE (`bookings`.`start` BETWEEN '2018-04-04 00:00:00' AND '2018-04-04 23:59:59') AND (`bookings`.`end` BETWEEN '2018-04-04 00:00:00' AND '2018-04-04 23:59:59')[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT `bookings`.* FROM `bookings` WHERE (`bookings`.`start` BETWEEN '2018-04-05 00:00:00' AND '2018-04-05 23:59:59') AND (`bookings`.`end` BETWEEN '2018-04-05 00:00:00' AND '2018-04-05 23:59:59')[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT `bookings`.* FROM `bookings` WHERE (`bookings`.`start` BETWEEN '2018-04-06 00:00:00' AND '2018-04-06 23:59:59') AND (`bookings`.`end` BETWEEN '2018-04-06 00:00:00' AND '2018-04-06 23:59:59')[0m
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT `bookings`.* FROM `bookings` WHERE (`bookings`.`start` BETWEEN '2018-04-07 00:00:00' AND '2018-04-07 23:59:59') AND (`bookings`.`end` BETWEEN '2018-04-07 00:00:00' AND '2018-04-07 23:59:59')[0m
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT `bookings`.* FROM `bookings` WHERE (`bookings`.`start` BETWEEN '2018-04-08 00:00:00' AND '2018-04-08 23:59:59') AND (`bookings`.`end` BETWEEN '2018-04-08 00:00:00' AND '2018-04-08 23:59:59')[0m
+  Rendered bookings/index.html.erb within layouts/application (16.3ms)
+Completed 200 OK in 46ms (Views: 39.0ms | ActiveRecord: 3.9ms)
+
+
+Finished "/cable/" [WebSocket] for 192.168.0.113 at 2018-04-04 04:26:39 +0400
+FingerprintChannel stopped streaming from fingerprint_channel
+Started GET "/cable" for 192.168.0.113 at 2018-04-04 04:26:39 +0400
+Cannot render console from 192.168.0.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/cable/" [WebSocket] for 192.168.0.113 at 2018-04-04 04:26:39 +0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+FingerprintChannel is transmitting the subscription confirmation
+FingerprintChannel is streaming from fingerprint_channel
+Started GET "/bookings/new" for 192.168.0.113 at 2018-04-04 04:29:50 +0400
+Cannot render console from 192.168.0.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BookingsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering bookings/new.html.erb within layouts/application
+  Rendered bookings/_menubar.html.erb (0.2ms)
+  [1m[36mUserGroup Load (0.1ms)[0m  [1m[34mSELECT `user_groups`.* FROM `user_groups`[0m
+  Rendered bookings/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 30ms (Views: 27.6ms | ActiveRecord: 0.2ms)
+
+
+Finished "/cable/" [WebSocket] for 192.168.0.113 at 2018-04-04 04:29:50 +0400
+FingerprintChannel stopped streaming from fingerprint_channel
+Started GET "/cable" for 192.168.0.113 at 2018-04-04 04:29:51 +0400
+Cannot render console from 192.168.0.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/cable/" [WebSocket] for 192.168.0.113 at 2018-04-04 04:29:51 +0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+FingerprintChannel is transmitting the subscription confirmation
+FingerprintChannel is streaming from fingerprint_channel
+Started GET "/bookings/new" for 192.168.0.113 at 2018-04-04 04:42:31 +0400
+Cannot render console from 192.168.0.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BookingsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering bookings/new.html.erb within layouts/application
+  Rendered bookings/_menubar.html.erb (0.2ms)
+  [1m[36mUserGroup Load (0.5ms)[0m  [1m[34mSELECT `user_groups`.* FROM `user_groups`[0m
+  Rendered bookings/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 51ms (Views: 47.4ms | ActiveRecord: 0.6ms)
+
+
+Finished "/cable/" [WebSocket] for 192.168.0.113 at 2018-04-04 04:42:31 +0400
+FingerprintChannel stopped streaming from fingerprint_channel
+Started GET "/cable" for 192.168.0.113 at 2018-04-04 04:42:31 +0400
+Cannot render console from 192.168.0.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/cable/" [WebSocket] for 192.168.0.113 at 2018-04-04 04:42:31 +0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+FingerprintChannel is transmitting the subscription confirmation
+FingerprintChannel is streaming from fingerprint_channel
+Started GET "/bookings/new" for 192.168.0.113 at 2018-04-04 04:48:23 +0400
+Cannot render console from 192.168.0.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+SyntaxError (/home/hassan/Fingerprint-Identification/web-interface/app/controllers/bookings_controller.rb:24: syntax error, unexpected ':', expecting keyword_then or ',' or ';' or '\n'
+	  		when "Day":
+	  		          ^
+/home/hassan/Fingerprint-Identification/web-interface/app/controllers/bookings_controller.rb:26: syntax error, unexpected keyword_when, expecting keyword_end
+	  		when "Week"
+	  		^~~~
+/home/hassan/Fingerprint-Identification/web-interface/app/controllers/bookings_controller.rb:28: syntax error, unexpected keyword_when, expecting keyword_end
+	  		when "Month"
+	  		^~~~
+/home/hassan/Fingerprint-Identification/web-interface/app/controllers/bookings_controller.rb:50: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/bookings_controller.rb:24: syntax error, unexpected ':', expecting keyword_then or ',' or ';' or '\n'
+app/controllers/bookings_controller.rb:26: syntax error, unexpected keyword_when, expecting keyword_end
+app/controllers/bookings_controller.rb:28: syntax error, unexpected keyword_when, expecting keyword_end
+app/controllers/bookings_controller.rb:50: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/bookings/new" for 192.168.0.113 at 2018-04-04 04:48:46 +0400
+Cannot render console from 192.168.0.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+SyntaxError (/home/hassan/Fingerprint-Identification/web-interface/app/controllers/bookings_controller.rb:50: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/bookings_controller.rb:50: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/bookings/new" for 192.168.0.113 at 2018-04-04 04:48:55 +0400
+Cannot render console from 192.168.0.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+SyntaxError (/home/hassan/Fingerprint-Identification/web-interface/app/controllers/bookings_controller.rb:51: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/bookings_controller.rb:51: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/bookings/new" for 192.168.0.113 at 2018-04-04 04:49:16 +0400
+Cannot render console from 192.168.0.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+SyntaxError (/home/hassan/Fingerprint-Identification/web-interface/app/controllers/bookings_controller.rb:53: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/bookings_controller.rb:53: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/bookings/new" for 192.168.0.113 at 2018-04-04 04:49:54 +0400
+Cannot render console from 192.168.0.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BookingsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering bookings/new.html.erb within layouts/application
+  Rendered bookings/_menubar.html.erb (0.3ms)
+  [1m[36mUserGroup Load (7.0ms)[0m  [1m[34mSELECT `user_groups`.* FROM `user_groups`[0m
+  Rendered bookings/new.html.erb within layouts/application (26.6ms)
+Completed 200 OK in 85ms (Views: 61.4ms | ActiveRecord: 8.6ms)
+
+
+Started GET "/cable" for 192.168.0.113 at 2018-04-04 04:49:55 +0400
+Cannot render console from 192.168.0.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/cable/" [WebSocket] for 192.168.0.113 at 2018-04-04 04:49:55 +0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+FingerprintChannel is transmitting the subscription confirmation
+FingerprintChannel is streaming from fingerprint_channel
+Started POST "/bookings" for 192.168.0.113 at 2018-04-04 04:50:28 +0400
+Cannot render console from 192.168.0.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BookingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CHuAndhNbgbPxO2ifMIuMnFb7yXWFpejqWGLXYb+H5auJg1cIgteRZUex0H4gmwWcsqY2P452GHcNVgRgL3aqQ==", "timepicker"=>"04/01/2018 10:00 AM - 04/01/2018 12:00 PM", "start"=>"04/01/2018 10:00 AM", "end"=>"04/01/2018 12:00 PM", "permissions"=>"exam-style", "user-group"=>"4", "example"=>"on", "recurring"=>"1", "frequency-peroid"=>"day", "frequency-number"=>"5"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUserGroup Load (0.2ms)[0m  [1m[34mSELECT  `user_groups`.* FROM `user_groups` WHERE `user_groups`.`id` = 4 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `bookings` (`start`, `end`, `created_at`, `updated_at`, `permissions`, `user_group_id`) VALUES ('2018-04-01 10:00:00', '2018-04-01 12:00:00', '2018-04-04 00:50:28', '2018-04-04 00:50:28', 'exam-style', 4)[0m
+  [1m[35m (27.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUserGroup Load (1.5ms)[0m  [1m[34mSELECT  `user_groups`.* FROM `user_groups` WHERE `user_groups`.`id` = 4 LIMIT 1[0m
+  [1m[35mSQL (8.6ms)[0m  [1m[32mINSERT INTO `bookings` (`start`, `end`, `created_at`, `updated_at`, `permissions`, `user_group_id`) VALUES ('2018-04-02 10:00:00', '2018-04-02 12:00:00', '2018-04-04 00:50:28', '2018-04-04 00:50:28', 'exam-style', 4)[0m
+  [1m[35m (7.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUserGroup Load (0.2ms)[0m  [1m[34mSELECT  `user_groups`.* FROM `user_groups` WHERE `user_groups`.`id` = 4 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `bookings` (`start`, `end`, `created_at`, `updated_at`, `permissions`, `user_group_id`) VALUES ('2018-04-03 10:00:00', '2018-04-03 12:00:00', '2018-04-04 00:50:28', '2018-04-04 00:50:28', 'exam-style', 4)[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUserGroup Load (0.1ms)[0m  [1m[34mSELECT  `user_groups`.* FROM `user_groups` WHERE `user_groups`.`id` = 4 LIMIT 1[0m
+  [1m[35mSQL (1.8ms)[0m  [1m[32mINSERT INTO `bookings` (`start`, `end`, `created_at`, `updated_at`, `permissions`, `user_group_id`) VALUES ('2018-04-04 10:00:00', '2018-04-04 12:00:00', '2018-04-04 00:50:28', '2018-04-04 00:50:28', 'exam-style', 4)[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUserGroup Load (0.2ms)[0m  [1m[34mSELECT  `user_groups`.* FROM `user_groups` WHERE `user_groups`.`id` = 4 LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `bookings` (`start`, `end`, `created_at`, `updated_at`, `permissions`, `user_group_id`) VALUES ('2018-04-05 10:00:00', '2018-04-05 12:00:00', '2018-04-04 00:50:28', '2018-04-04 00:50:28', 'exam-style', 4)[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  Rendering bookings/create.html.erb within layouts/application
+  Rendered bookings/create.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 133ms (Views: 41.4ms | ActiveRecord: 55.2ms)
+
+
+Finished "/cable/" [WebSocket] for 192.168.0.113 at 2018-04-04 04:50:28 +0400
+FingerprintChannel stopped streaming from fingerprint_channel
+Started GET "/cable" for 192.168.0.113 at 2018-04-04 04:50:29 +0400
+Cannot render console from 192.168.0.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/cable/" [WebSocket] for 192.168.0.113 at 2018-04-04 04:50:29 +0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+FingerprintChannel is transmitting the subscription confirmation
+FingerprintChannel is streaming from fingerprint_channel
+Started GET "/" for 192.168.0.113 at 2018-04-04 04:50:31 +0400
+Cannot render console from 192.168.0.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 55ms (Views: 54.4ms | ActiveRecord: 0.0ms)
+
+
+Finished "/cable/" [WebSocket] for 192.168.0.113 at 2018-04-04 04:50:31 +0400
+FingerprintChannel stopped streaming from fingerprint_channel
+Started GET "/cable" for 192.168.0.113 at 2018-04-04 04:50:31 +0400
+Cannot render console from 192.168.0.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/cable/" [WebSocket] for 192.168.0.113 at 2018-04-04 04:50:31 +0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+FingerprintChannel is transmitting the subscription confirmation
+FingerprintChannel is streaming from fingerprint_channel
+Started GET "/bookings/index" for 192.168.0.113 at 2018-04-04 04:50:34 +0400
+Cannot render console from 192.168.0.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/bookings/index"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/bookings/" for 192.168.0.113 at 2018-04-04 04:50:36 +0400
+Cannot render console from 192.168.0.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BookingsController#index as HTML
+  [1m[36mUser Load (94.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering bookings/index.html.erb within layouts/application
+  Rendered bookings/_menubar.html.erb (0.3ms)
+  [1m[36mBooking Load (2.3ms)[0m  [1m[34mSELECT `bookings`.* FROM `bookings` WHERE (`bookings`.`start` BETWEEN '2018-04-02 00:00:00' AND '2018-04-02 23:59:59') AND (`bookings`.`end` BETWEEN '2018-04-02 00:00:00' AND '2018-04-02 23:59:59')[0m
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT `bookings`.* FROM `bookings` WHERE (`bookings`.`start` BETWEEN '2018-04-03 00:00:00' AND '2018-04-03 23:59:59') AND (`bookings`.`end` BETWEEN '2018-04-03 00:00:00' AND '2018-04-03 23:59:59')[0m
+  [1m[36mBooking Load (5.4ms)[0m  [1m[34mSELECT `bookings`.* FROM `bookings` WHERE (`bookings`.`start` BETWEEN '2018-04-04 00:00:00' AND '2018-04-04 23:59:59') AND (`bookings`.`end` BETWEEN '2018-04-04 00:00:00' AND '2018-04-04 23:59:59')[0m
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT `bookings`.* FROM `bookings` WHERE (`bookings`.`start` BETWEEN '2018-04-05 00:00:00' AND '2018-04-05 23:59:59') AND (`bookings`.`end` BETWEEN '2018-04-05 00:00:00' AND '2018-04-05 23:59:59')[0m
+  [1m[36mBooking Load (98.1ms)[0m  [1m[34mSELECT `bookings`.* FROM `bookings` WHERE (`bookings`.`start` BETWEEN '2018-04-06 00:00:00' AND '2018-04-06 23:59:59') AND (`bookings`.`end` BETWEEN '2018-04-06 00:00:00' AND '2018-04-06 23:59:59')[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT `bookings`.* FROM `bookings` WHERE (`bookings`.`start` BETWEEN '2018-04-07 00:00:00' AND '2018-04-07 23:59:59') AND (`bookings`.`end` BETWEEN '2018-04-07 00:00:00' AND '2018-04-07 23:59:59')[0m
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT `bookings`.* FROM `bookings` WHERE (`bookings`.`start` BETWEEN '2018-04-08 00:00:00' AND '2018-04-08 23:59:59') AND (`bookings`.`end` BETWEEN '2018-04-08 00:00:00' AND '2018-04-08 23:59:59')[0m
+  Rendered bookings/index.html.erb within layouts/application (177.8ms)
+Completed 200 OK in 953ms (Views: 742.4ms | ActiveRecord: 201.5ms)
+
+
+Finished "/cable/" [WebSocket] for 192.168.0.113 at 2018-04-04 04:50:37 +0400
+FingerprintChannel stopped streaming from fingerprint_channel
+Started GET "/cable" for 192.168.0.113 at 2018-04-04 04:50:38 +0400
+Cannot render console from 192.168.0.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/cable/" [WebSocket] for 192.168.0.113 at 2018-04-04 04:50:38 +0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+FingerprintChannel is transmitting the subscription confirmation
+FingerprintChannel is streaming from fingerprint_channel

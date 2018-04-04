@@ -16,12 +16,37 @@ class BookingsController < ApplicationController
   	end_date = DateTime.strptime(params["end"], date_format)
   	permissions = params["permissions"]
   	user_group = params["user-group"]
-  	Booking.create!({
-  		start: start_time,
-  		end: end_date,
-  		permissions: permissions,
-  		user_group_id: user_group
-  	})
+  	recurring = params["recurring"]
+  	frequency_peroid = params["frequency-peroid"]  
+  	frequency_number = params["frequency-number"].to_i
+  	if recurring == "1" then
+  		case frequency_peroid
+	  		when "Day"
+	  			frequency = 1.day
+	  		when "Week"
+	  			frequency = 1.week
+	  		when "Month"
+	  			frequency = 1.month
+	  		else
+	  			frequency = 1.day
+	  	end
+  		(0..(frequency_number)).each do |booking_number|
+  			Booking.create!({
+		  		start: start_time + (booking_number * frequency),
+		  		end: end_date + (booking_number * frequency),
+		  		permissions: permissions,
+		  		user_group_id: user_group
+		  	})
+  		end
+  	else
+  		Booking.create!({
+	  		start: start_time,
+	  		end: end_date,
+	  		permissions: permissions,
+	  		user_group_id: user_group
+	  	})
+	end
+   	
   end
 
   def delete

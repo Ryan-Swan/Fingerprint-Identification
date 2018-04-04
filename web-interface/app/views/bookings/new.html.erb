@@ -44,6 +44,7 @@
 			<div class="ui field">
 				<div class="ui recurring checkbox">
 					<input type="checkbox" name="example">
+					<input type="hidden" name="recurring" value="-1">
 					<label>Make this a recurring booking</label>
 				</div>
 			</div>
@@ -63,6 +64,7 @@
 					<label>For</label>
 					<input style="width:5em" type="number" name="frequency-number"/>
 					<label class="peroid-of-time"></label>
+					
 				</div>
 			</div>
 
@@ -109,6 +111,7 @@
 	$(".checkbox").checkbox()
 	$(".recurring.segment").toggle()
 	$(".recurring.checkbox").on("click", function(x) {
+		$("input[name=recurring]").val($("input[name=recurring]").val() * -1)
 		$(".recurring.segment").toggle()
 	})
 	$(".peroid.selection").change(function() {
