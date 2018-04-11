@@ -1,6 +1,8 @@
 module BookingsHelper
 	def booking_colour(booking)
-		if booking.permissions == "default"
+		if booking.end < Time.zone.now
+			return "disabled"
+		elsif booking.permissions == "default"
 			return ""
 		elsif booking.permissions == "non-anonymous"
 			return "blue"

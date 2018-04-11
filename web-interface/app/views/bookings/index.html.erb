@@ -28,7 +28,7 @@
 		<div class="ui seven column divided grid">
 			<% @bookings.each do |bookings| %>
 			<div class="ui column">
-				<% bookings.each do |booking| %>
+				<% bookings.order('start asc').each do |booking| %>
 					<div class="ui <%= booking_colour booking %> booking  label">
 					 <%= booking.start.strftime("%H:%M") %> to 
 					 <%= booking.end.strftime("%H:%M") %>

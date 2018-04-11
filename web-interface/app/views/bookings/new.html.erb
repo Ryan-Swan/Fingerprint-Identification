@@ -64,37 +64,29 @@
 					<label>For</label>
 					<input style="width:5em" type="number" name="frequency-number"/>
 					<label class="peroid-of-time"></label>
-					
+
 				</div>
+			</div>
+			<div class="ui submit field">
+				<button type="submit" class="ui red button">Submit</button>
 			</div>
 
 		</div>
 	</div>
-	<div class="ui submit field">
-		<button type="submit" class="ui red button">Submit</button>
-	</div>
+	
 	<% end %>
 </div>
 <script>
 	$('input[name=timepicker]').daterangepicker({
 		autoUpdateInput: false,
 	    "timePicker": true,
-	    "startDate": "03/28/2018",
-	    "endDate": "04/03/2018",
+	    "startDate": "<%= Date.today.strftime('%m/%d/%y') %>",
+	    "endDate": "<%= Date.today.strftime('%m/%d/%y') %>",
 	    "buttonClasses": "ui tiny button",
 	    "applyClass": "green",
 	    "cancelClass": "red",
 	    "locale": {
-	        "format": 'MM/DD/YYYY h:mm A',
-	         "daysOfWeek": [
-	            "Mo",
-	            "Tu",
-	            "We",
-	            "Th",
-	            "Fr",
-	            "Sa",
-	            "Su"
-	        ]
+	        "format": 'MM/DD/YYYY h:mm A'
 	    }
 	}, function(start, end, label) {
 		$("input[name=start]").val(start.format('MM/DD/YYYY h:mm A'))
@@ -124,6 +116,18 @@
 	$(".user-group").change(function() {
 		$("input[name=user-group]").val($(".user-group").dropdown('get value'))
 	})
+	$('.ui.form')
+	  .form({
+	    fields: {
+	      timepicker     : 'empty',
+	      start   : 'empty',
+	      end : 'empty',
+	      "user-group" : 'empty',
+	      permissions   : ['minCount[2]', 'empty'],
+	      terms    : 'checked'
+	    }
+	  })
+	;
 	
 	
 </script>

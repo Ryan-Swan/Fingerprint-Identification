@@ -3,8 +3,6 @@ class BookingsController < ApplicationController
   def index
   	@bookings = (0..6).map {|i| Date.today.at_beginning_of_week + i }
   	@bookings = @bookings.map {|datetime| Booking.where(start: datetime.all_day, end: datetime.all_day)}
-
-
   end
 
   def new
@@ -13,12 +11,19 @@ class BookingsController < ApplicationController
   def create
   	date_format = "%m/%d/%Y %l:%M %p"
   	start_time = DateTime.strptime(params["start"], date_format)
-  	end_date = DateTime.strptime(params["end"], date_format)
+  	end_time = DateTime.strptime(params["end"], date_format)
   	permissions = params["permissions"]
   	user_group = params["user-group"]
   	recurring = params["recurring"]
   	frequency_peroid = params["frequency-peroid"]  
   	frequency_number = params["frequency-number"].to_i
+  	Booking.where("start > ?", Time.zone.now).each do |booking|
+  		if  start_time.between?(booking.start, booking.end) && 
+  			end_time.between?(booking.start, booking.end)
+  		then
+  			raise "Booking exists during this time"
+  		end
+  	end
   	if recurring == "1" then
   		case frequency_peroid
 	  		when "Day"
@@ -33,7 +38,7 @@ class BookingsController < ApplicationController
   		(0..(frequency_number)).each do |booking_number|
   			Booking.create!({
 		  		start: start_time + (booking_number * frequency),
-		  		end: end_date + (booking_number * frequency),
+		  		end: end_time + (booking_number * frequency),
 		  		permissions: permissions,
 		  		user_group_id: user_group
 		  	})
@@ -41,7 +46,7 @@ class BookingsController < ApplicationController
   	else
   		Booking.create!({
 	  		start: start_time,
-	  		end: end_date,
+	  		end: end_time,
 	  		permissions: permissions,
 	  		user_group_id: user_group
 	  	})
