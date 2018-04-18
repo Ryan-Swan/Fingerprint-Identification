@@ -1,15 +1,35 @@
 <div class="ui container">
-	<h2>Computer Science lab</h2>
-	<h4>Scan your card or use biometrics</h4>
+	<div class="ui  segment header">
+		<h2>Computer Science lab</h2>
+		<h4>Select method</h4>
+	</div>
 	<div class="ui divider"></div>
-	<div class="ui two column grid">
-		<div class="ui column">
-			<a href="/fingerprints"><i class="ui hand pointer icon"></i></a>
-			<div class="ui label">Fingerprint</div>
-		</div>
-		<div class="ui column">
-			<i class="ui camera icon"></i>
-			<div class="ui label">Facial recognition</div>
+	<div class="ui raised segment">
+		<div class="ui two column grid">
+			<div class="ui center column">
+				<div class="status waiting-for-fingerprint">
+					<a href="/fingerprints"><i class="ui massive hand pointer status icon"></i></a>
+					<div>
+						<a href="/fingerprints" class="ui label">Fingerprint</a>
+					</div>
+				</div>
+			</div>
+			<div class="ui center column">
+				<div class="status waiting-for-fingerprint">
+					<a href="/faces"><i class="ui massive camera status icon"></i></a>
+					<div>
+						<a  class="ui label">Face recognition</a>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
+	<div class="ui blue message waiting-for-fingerprint">
+		Place your finger on the fingerprint scanner
+	</div>
+	<% if Booking.current_booking %>
+	<div class="ui message">
+		Booking ends in <%= distance_of_time_in_words(Booking.current_booking.end.to_datetime, Time.zone.now.to_datetime) %>
+	</div>
+	<% end %>
 </div>

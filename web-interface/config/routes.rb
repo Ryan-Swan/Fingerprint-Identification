@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'faces/', to: 'faces#index'
+
   get 'user_groups/index'
   post 'user_groups/', to: 'user_groups#create'
   get 'user_groups/new'
