@@ -1,3 +1,10 @@
+"""
+This code is not ours or written by us, it is simply used for the pre-processing
+of fingerprints before the neural network was trained.
+
+The source for this can be found at: https://github.com/tommythorsen/fingerprints
+"""
+
 import matplotlib.pyplot as plt
 import numpy as np
 import scipy.ndimage as ndimage
