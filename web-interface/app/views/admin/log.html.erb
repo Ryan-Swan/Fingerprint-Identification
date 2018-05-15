@@ -1,0 +1,61 @@
+<div class="ui container">
+	<div class="ui  segment header">
+		<h2>Admin</h2>
+		<h4>Authentication logs</h4>
+	</div>
+	<div class="ui divider"></div>
+
+	<div class="ui raised segment">
+		<div class="ui search" style="text-align:right">
+		  <input class="prompt" type="text" placeholder="Search...">
+		  <div class="results"></div>
+		  <div class="ui circular icon button dropdown">
+		  	<i class="ui filter icon link"></i>
+		  	<div class="menu">
+			    <div class="header">
+			      <i class="tags icon"></i>
+			      Column to search
+			    </div>
+			    <div class="divider"></div>
+			    <div class="item">
+			      <i class="attention icon"></i>
+			      User
+			    </div>
+			    <div class="item">
+			      <i class="comment icon"></i>
+			      Time
+			    </div>
+			    <div class="item">
+			      <i class="conversation icon"></i>
+			      Booking
+			    </div>
+			  </div>
+		  </div>
+		  
+		</div>
+
+		<table class="ui celled table">
+			<thead>
+				<tr>
+					<th>User</th>
+					<th>Time</th>
+					<th>Booking</th>
+					<th>Authorized</th>
+				</tr>
+			</thead>
+			<tbody>
+				<% AuthenticationLog.all.each do |log| %>
+				<tr>
+					<td><a href="#"><%= log.user.username %></a></td>
+					<td><%= log.created_at %></td>
+					<td>HCI lab</td>
+					<td><%= !log.unathorized %></td>
+				</tr>
+				<% end %>
+			</tbody>
+		</table>
+	</div>
+</div>
+<script>
+	$(".dropdown").dropdown()
+</script>
