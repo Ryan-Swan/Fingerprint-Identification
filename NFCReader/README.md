@@ -1,15 +1,7 @@
-# Fingerprint-Identification
+# NFC-Card-Reader
 
-*Project Title:* Fast Fingerprint Identification
+*Description:* Extract data off of NFC-Card for use of easy registration
 
-*Project Description:* Develop an application that can help a company grant entry access to a vast number of employees by means of their fingerprint within an identification setting.
+*Hardware/Software requirements:* ACR122U NFC Terminal, MIFARE Classic 1K ID Card, WIN 7 or later, nfc-tools library found here: https://github.com/grundid/nfctools
 
-*Team Members:* Ryan Swan, Majed Hussain, Hassan Al-ubeidi and Charalambos ‘Haris’ Symeou.
-
-*Supervisor/Sponsor:* Isaac Triguero
-
-*Hardware/Software requirements:* Secugen Fingerprint Scanner, Windows 7 or later.
-
-*Trello board:* https://trello.com/b/wllKiIAv
-
-*Documentation:* https://drive.google.com/drive/folders/1Eem6ZHUJBs5vjiBorV2oGX53crJia6Lu?usp=sharing
+*Issues:* Some sort of hidden dependency unlisted by the API documentation, drivers still don't allow detection of NFC terminal on some systems.
