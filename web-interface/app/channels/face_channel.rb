@@ -10,11 +10,8 @@ class FaceChannel < ApplicationCable::Channel
   def scan(data)
     ActionCable.server.broadcast(
       'face_channel', 
-      message: "Recieved faceprint"
+      message: "Recieved faceprint: " + data['message'].gsub(/data:image\/jpeg;base64,/, "")
     )
-		File.open('/Users/hassan-alubeidi/keras-face/demo/data/images/new.jpg', 'wb') do|f|
-			f.write(Base64.decode64(data['message'].gsub(/data:image\/jpeg;base64,/, "")))
-		end
   end
 
   def authenticate(data)
@@ -22,5 +19,6 @@ class FaceChannel < ApplicationCable::Channel
       'face_channel', 
       message: data['message']
     )
+    AuthenticationLog.create({user_id: user.find_by(data['message']).id})
   end
 end

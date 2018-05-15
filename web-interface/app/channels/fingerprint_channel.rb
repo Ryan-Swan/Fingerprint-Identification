@@ -12,5 +12,11 @@ class FingerprintChannel < ApplicationCable::Channel
   		'fingerprint_channel', 
   		message: data['message']
   	)
+    if data['message'].match(/Base 64 Image: /) then
+      File.open('./app/assets/images/outputimage.png', 'wb') do|f|
+        f.write(Base64.decode64(data['message'].gsub(/Base 64 Image: /, "")))
+      end
+    end
+    
   end
 end
