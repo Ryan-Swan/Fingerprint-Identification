@@ -1,3 +1,14 @@
+"""
+This code is not ours or written by us, it is simply used for the pre-processing
+of fingerprints before the neural network was trained. All we have done is make
+a slight adjustment so that it could pre-process a large number of fingerprints
+instead of just one at a time.
+
+The source for this can be found at https://github.com/rtshadow/biometrics.git
+"""
+
+
+
 #!/usr/bin/env python3
 import glob
 import matplotlib.pyplot as plt
@@ -32,7 +43,6 @@ options, args = parser.parse_args()
 def gaborKernel(size, angle, frequency):
     """
     Create a Gabor kernel given a size, angle and frequency.
-    Code is taken from https://github.com/rtshadow/biometrics.git
     """
 
     angle += np.pi * 0.5
