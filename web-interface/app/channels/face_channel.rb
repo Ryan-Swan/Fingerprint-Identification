@@ -21,4 +21,11 @@ class FaceChannel < ApplicationCable::Channel
     )
     AuthenticationLog.create({user_id: user.find_by(data['message']).id})
   end
+
+  def register(data)
+    ActionCable.server.broadcast(
+      'face_channel', 
+      message: data['message']
+    )
+  end
 end

@@ -12,7 +12,7 @@
 					<canvas style="display:none;"></canvas>
 					<img id="screenshot-img" />
 					<div>
-						<div class="ui label">Taking picture <span id="countdown">...</span></div>
+						<div class="ui label">Taking picture in <span id="countdown">3</span></div>
 					</div>
 				</div>
 				
@@ -82,21 +82,36 @@
 	function videoError(e) {
 	    // do something
 	}
-	countDown = 0
+	countDown = 3
+	x = () => { countDown--; $("#countdown").text(countDown) }
+	y = () => { countDown > 0 ? x() : takeScreenshot() }
+	setInterval(y, 1000)
 	const button = document.querySelector('#screenshot-button');
 	const img = document.querySelector('#screenshot-img');
 
 	const canvas = document.createElement('canvas');
+	takenScreenshot = 0
 	takeScreenshot = function() {
-		if(!validFace)
-		{canvas.width = video.videoWidth;
-				canvas.height = video.videoHeight;
-				canvas.getContext('2d').drawImage(video, 0, 0);
-				img.src = canvas.toDataURL('image/jpeg');
-				App.face.scan(img.src)}
+		if(takenScreenshot < 1) {
+			canvas.width = video.videoWidth;
+			canvas.height = video.videoHeight;
+			canvas.getContext('2d').drawImage(video, 0, 0);
+			img.src = canvas.toDataURL('image/jpeg');
+			$.post( "/cards/register_face",
+				{
+					imageData: img.src,
+					username: "<%= User.find_by(card_id: params["card_id"]).username %>"
+
+				}
+			, function( data ) {
+			  $( ".result" ).html( data );
+			});
+			console.log({
+					imageData: img.src,
+					username: "<%= User.find_by(card_id: params["card_id"]).username %>"
+
+				})
+			takenScreenshot += 1
+		}
 	};
-	setInterval(takeScreenshot, 2000)
-	
-	
-	
 </script>

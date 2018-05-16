@@ -1,9 +1,12 @@
 <div class="ui container">
 	<div class="ui  segment header">
 		<h2>Computer Science lab</h2>
-		<h4>Fingerprint authentication</h4>
+		<h4>Register fingerprint</h4>
 	</div>
 	<div class="ui divider"></div>
+	<div class="ui white message">
+		User: <%= @user.username %>
+	</div>
 	<div class="ui raised segment">
 		<div class="ui two column grid">
 			<div class="ui center column">
@@ -16,7 +19,7 @@
 				<div class="status waiting-for-match">
 					<%= image_tag "outputimage.png", class: "test" %>
 					<div>
-						<div class="ui orange waiting label">Waiting for match</div>
+						<div class="ui orange waiting label">Registering</div>
 					</div>
 				</div>
 			</div>
@@ -24,13 +27,13 @@
 				<div class="status door-unlocked">
 					<i class="ui massive unlock status icon"></i>
 					<div>
-						<div class="ui green label">Door unlocked </div>
+						<div class="ui green label">User registered</div>
 					</div>				
 				</div>
 				<div class="status door-locked">
 					<i class="ui massive lock status icon"></i>
 					<div>
-						<div class="ui red label">Door locked</div>
+						<div class="ui red label">Error</div>
 					</div>
 				</div>
 			</div>
@@ -51,7 +54,6 @@
 	$(".door-locked").hide()
 	$(".door-unlocked").hide()
 	$(".loader").hide()
-	setTimeout(() => App.fingerprint.scan("Scan Fingerprint"), 200)
-
-	setTimeout(() => window.location = "/", 5000)
+	setTimeout(() => App.fingerprint.scan("Register Fingerprint:<%= @user.username %>", 500))
+	cardId = "<%= @user.card_id %>"
 </script>

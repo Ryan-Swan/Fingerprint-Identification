@@ -16,7 +16,23 @@ class FingerprintChannel < ApplicationCable::Channel
       File.open('./app/assets/images/outputimage.png', 'wb') do|f|
         f.write(Base64.decode64(data['message'].gsub(/Base 64 Image: /, "")))
       end
+      # if User.all.count > 500 then
+      #   #pre process & classify
+      #   #send value to pc database
+      # else
+        # ActionCable.server.broadcast(
+        #   'fingerprint_channel', 
+        #     message: "Classify"
+        #   )
+      # end
     end
-    
+
+    if data['message'] == "Scanned fingerprint" then
+      ActionCable.server.broadcast(
+        'fingerprint_channel', 
+        message: "Validate Fingerprint"
+      )
+    end
+
   end
 end

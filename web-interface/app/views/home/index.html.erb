@@ -24,12 +24,42 @@
 			</div>
 		</div>
 	</div>
-	<div class="ui blue message waiting-for-fingerprint">
-		Place your finger on the fingerprint scanner
+	<div class="ui small cards modal">
+		<div class="ui content list">
+			<% User.all.each do |user| %>
+				<a href="/fingerprints/new?card_id=<%= user.card_id %>" class="item"><%= user.username %></a>
+			<% end %>
+		</div>
 	</div>
+	<div class="ui small new_card modal">
+		<div class="ui content form">
+			<form action="/admin/create_card" method="post">
+				<div class="ui field">
+					<label>Username</label>
+					<input type="text" name="name" />
+				</div>
+				<input type="submit" class="ui red button" value="Submit" />
+			</form>
+		</div>
+	</div>
+	
+	
 	<% if Booking.current_booking %>
 	<div class="ui message">
-		Booking ends in <%= distance_of_time_in_words(Booking.current_booking.end.to_datetime, Time.zone.now.to_datetime) %>
+		There is currently a lab in place, for group <strong><%= Booking.current_booking.user_group.name %></strong>
+		<p><em>Booking ends in <%= distance_of_time_in_words(Booking.current_booking.end.to_datetime, Time.zone.now.to_datetime) %></em></p>
 	</div>
 	<% end %>
+	<div class="ui segment">
+		<h5>Simulation: <em>Demo purposes only</em></h5>
+		<div class="ui two large buttons">
+			<div class="ui button" onclick="$('.ui.cards.modal').modal('show')">Cards</div>
+			<div class="ui button" onclick="$('.ui.new_card.modal').modal('show')">New Card</div>
+		</div>
+		<% if params["message"] %>
+		<div class="ui blue message waiting-for-fingerprint">
+			<%= params["message"] %>
+		</div>
+	<% end %>
+	</div>
 </div>

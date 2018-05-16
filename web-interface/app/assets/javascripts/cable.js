@@ -12,12 +12,3 @@
 
 
 }).call(this);
-
-setTimeout(() => {
-	App.subscriptions = {}
-  keys = App.cable.subscriptions.subscriptions.map((x) =>
-  	JSON.parse(x.identifier).channel
-  ).map( (key, index) => {
-  	App.subscriptions[key] = App.cable.subscriptions.subscriptions[index]
-  })
-},2000)

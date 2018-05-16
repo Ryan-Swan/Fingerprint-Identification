@@ -1,3 +1,4 @@
+validFace = false
 App.face = App.cable.subscriptions.create("FaceChannel", {
   connected() {},
     // Called when the subscription is ready for use on the server
@@ -9,12 +10,11 @@ App.face = App.cable.subscriptions.create("FaceChannel", {
     switch(data['message']) {
       case "Not recognised":
           console.log("InValid!");
-          $(".door-unlocked").hide()
+          // $(".door-unlocked").hide()
           $(".door-locked").show()
           $(".waiting").hide()
           $(".loader").hide()
-          
-          
+          // setTimeout(() => window.location = "/?message=Valid", 2500)
           break
       default:
         if(data["message"].match("Face: ")) {
@@ -25,8 +25,11 @@ App.face = App.cable.subscriptions.create("FaceChannel", {
           console.log("Valid!");
           $(".loader").hide()
           $(".waiting").hide()
-          window.location = "/"
-
+          validFace = true
+          setTimeout(() =>  window.location = "/?message=Valid", 500)
+         
+        } else if(data["message"] == "Registered") {
+          window.location = "/?message='Registered user'"
         }
         console.log(data["message"])
         break
