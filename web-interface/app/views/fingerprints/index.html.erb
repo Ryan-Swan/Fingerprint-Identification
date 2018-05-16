@@ -1,0 +1,57 @@
+<div class="ui container">
+	<div class="ui  segment header">
+		<h2>Computer Science lab</h2>
+		<h4>Fingerprint authentication</h4>
+	</div>
+	<div class="ui divider"></div>
+	<div class="ui raised segment">
+		<div class="ui two column grid">
+			<div class="ui center column">
+				<div class="status waiting-for-fingerprint">
+					<i class="ui massive hand pointer status icon"></i>
+					<div>
+						<div class="ui label">Waiting for fingerprint</div>
+					</div>
+				</div>
+				<div class="status waiting-for-match">
+					<%= image_tag "outputimage.png", class: "test" %>
+					<div>
+						<div class="ui orange waiting label">Waiting for match</div>
+					</div>
+				</div>
+			</div>
+			<div class="ui center column">
+				<div class="status door-unlocked">
+					<i class="ui massive unlock status icon"></i>
+					<div>
+						<div class="ui green label">Door unlocked </div>
+					</div>				
+				</div>
+				<div class="status door-locked">
+					<i class="ui massive lock status icon"></i>
+					<div>
+						<div class="ui red label">Door locked</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="ui active inline loader"></div>
+	</div>
+	<div class="ui blue message waiting-for-fingerprint">
+		Place your finger on the fingerprint scanner
+	</div>
+	<% if Booking.current_booking %>
+	<div class="ui message">
+		Booking ends in <%= distance_of_time_in_words(Booking.current_booking.end.to_datetime, Time.zone.now.to_datetime) %>
+	</div>
+	<% end %>
+</div>
+<script>
+	$(".waiting-for-match").hide()
+	$(".door-locked").hide()
+	$(".door-unlocked").hide()
+	$(".loader").hide()
+	setTimeout(() => App.fingerprint.scan("Scan Fingerprint"), 200)
+
+	setTimeout(() => window.location = "/", 5000)
+</script>

@@ -1,0 +1,50 @@
+<%= render partial: "menubar" %>
+<div class="ui container">
+	<div class="ui  segment header">
+		<h2>Computer Science lab</h2>
+		<h4>Room bookings and authentication management</h4>
+	</div>
+	<div class="ui divider"></div>
+	<div style="text-align:right">
+		<div class="ui left labeled button" tabindex="0">
+			<a href="/bookings/new" class="ui basic label">
+				Add booking
+			</a>
+			<div class="ui icon button">
+				<i class="plus icon"></i>
+			</div>
+		</div>
+	</div>
+	<div class="ui seven column divided grid segment">
+		<div class="ui column">Monday</div>
+		<div class="ui column">Tuesday</div>
+		<div class="ui column">Wednesday</div>
+		<div class="ui column">Thursday</div>
+		<div class="ui column">Friday</div>
+		<div class="ui column">Saturday</div>
+		<div class="ui column">Sunday</div>
+	</div>
+	<div class="ui segment">
+		<div class="ui seven column divided grid">
+			<% @bookings.each do |bookings| %>
+			<div class="ui column">
+				<% bookings.order('start asc').each do |booking| %>
+					<div style="text-align:center" class="ui <%= booking_colour booking %> fluid booking  label">
+					 <%= booking.start.strftime("%H:%M") %> to 
+					 <%= booking.end.strftime("%H:%M") %>
+					</div>
+				<% end %>
+			</div>
+			<% end %>
+		</div>
+	</div>
+	<div>
+		<div><strong>Legend:</strong> (highlight to see descriptions) </div>
+		<div class="ui list"> 
+			<div class="item"><a class="ui empty circular label"></a> Default</div>
+			<div class="item"><a class="ui blue empty circular label"></a> Non-anonymous</div>
+			<div class="item"><a class="ui red empty circular label"></a> Exam style</div>
+			<div class="item"><a class="ui orange empty circular label"></a> Staff-only</div>
+		</div>
+	</div>
+</div>

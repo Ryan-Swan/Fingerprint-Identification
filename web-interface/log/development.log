@@ -1,0 +1,126 @@
+Started GET "/cable" for 127.0.0.1 at 2018-05-16 10:06:33 +0100
+  [1m[35m (41.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-16 10:06:34 +0100
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+FaceChannel is transmitting the subscription confirmation
+FaceChannel is streaming from face_channel
+Started GET "/cable" for 127.0.0.1 at 2018-05-16 10:06:36 +0100
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-16 10:06:36 +0100
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+FaceChannel is transmitting the subscription confirmation
+FaceChannel is streaming from face_channel
+CardChannel is transmitting the subscription confirmation
+CardChannel is streaming from card_channel
+FingerprintChannel is transmitting the subscription confirmation
+FingerprintChannel is streaming from fingerprint_channel
+Started GET "/?message=Valid!" for 127.0.0.1 at 2018-05-16 10:06:36 +0100
+Processing by HomeController#index as HTML
+  Parameters: {"message"=>"Valid!"}
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (24.4ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  [1m[36mBooking Load (0.6ms)[0m  [1m[34mSELECT `bookings`.* FROM `bookings`[0m
+  [1m[36mCACHE Booking Load (0.0ms)[0m  [1m[34mSELECT `bookings`.* FROM `bookings`[0m
+  [1m[36mUserGroup Load (6.2ms)[0m  [1m[34mSELECT  `user_groups`.* FROM `user_groups` WHERE `user_groups`.`id` = 1 LIMIT 1[0m
+  [1m[36mCACHE Booking Load (0.0ms)[0m  [1m[34mSELECT `bookings`.* FROM `bookings`[0m
+  Rendered home/index.html.erb within layouts/application (212.1ms)
+Completed 200 OK in 672ms (Views: 587.8ms | ActiveRecord: 81.2ms)
+
+
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-16 10:06:37 +0100
+FaceChannel stopped streaming from face_channel
+CardChannel stopped streaming from card_channel
+FingerprintChannel stopped streaming from fingerprint_channel
+Started GET "/cable" for 127.0.0.1 at 2018-05-16 10:06:38 +0100
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-16 10:06:38 +0100
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+CardChannel is transmitting the subscription confirmation
+CardChannel is streaming from card_channel
+FaceChannel is transmitting the subscription confirmation
+FaceChannel is streaming from face_channel
+FingerprintChannel is transmitting the subscription confirmation
+FingerprintChannel is streaming from fingerprint_channel
+Started GET "/cable" for 127.0.0.1 at 2018-05-16 10:09:39 +0100
+  [1m[35m (14.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-16 10:09:40 +0100
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+FingerprintChannel is transmitting the subscription confirmation
+FingerprintChannel is streaming from fingerprint_channel
+FaceChannel is transmitting the subscription confirmation
+FaceChannel is streaming from face_channel
+CardChannel is transmitting the subscription confirmation
+CardChannel is streaming from card_channel
+Started GET "/cable" for 127.0.0.1 at 2018-05-16 10:09:40 +0100
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-16 10:09:40 +0100
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+FaceChannel is transmitting the subscription confirmation
+FaceChannel is streaming from face_channel
+Started GET "/?message=Valid!" for 127.0.0.1 at 2018-05-16 10:09:40 +0100
+Processing by HomeController#index as HTML
+  Parameters: {"message"=>"Valid!"}
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (22.9ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  [1m[36mBooking Load (6.5ms)[0m  [1m[34mSELECT `bookings`.* FROM `bookings`[0m
+  [1m[36mCACHE Booking Load (0.0ms)[0m  [1m[34mSELECT `bookings`.* FROM `bookings`[0m
+  [1m[36mUserGroup Load (0.4ms)[0m  [1m[34mSELECT  `user_groups`.* FROM `user_groups` WHERE `user_groups`.`id` = 1 LIMIT 1[0m
+  [1m[36mCACHE Booking Load (0.0ms)[0m  [1m[34mSELECT `bookings`.* FROM `bookings`[0m
+  Rendered home/index.html.erb within layouts/application (143.4ms)
+Completed 200 OK in 421ms (Views: 373.8ms | ActiveRecord: 44.9ms)
+
+
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-16 10:09:41 +0100
+FaceChannel stopped streaming from face_channel
+FingerprintChannel stopped streaming from fingerprint_channel
+CardChannel stopped streaming from card_channel
+Started GET "/cable" for 127.0.0.1 at 2018-05-16 10:09:41 +0100
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-16 10:09:41 +0100
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+FaceChannel is transmitting the subscription confirmation
+FaceChannel is streaming from face_channel
+FingerprintChannel is transmitting the subscription confirmation
+FingerprintChannel is streaming from fingerprint_channel
+CardChannel is transmitting the subscription confirmation
+CardChannel is streaming from card_channel
+Started GET "/cable" for 127.0.0.1 at 2018-05-16 10:10:24 +0100
+  [1m[35m (6.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-16 10:10:24 +0100
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+FaceChannel is transmitting the subscription confirmation
+FaceChannel is streaming from face_channel
+Started GET "/cable" for 127.0.0.1 at 2018-05-16 10:10:25 +0100
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-16 10:10:25 +0100
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+FingerprintChannel is transmitting the subscription confirmation
+FingerprintChannel is streaming from fingerprint_channel
+FaceChannel is transmitting the subscription confirmation
+FaceChannel is streaming from face_channel
+CardChannel is transmitting the subscription confirmation
+CardChannel is streaming from card_channel
+Started GET "/?message=Valid!" for 127.0.0.1 at 2018-05-16 10:10:26 +0100
+Processing by HomeController#index as HTML
+  Parameters: {"message"=>"Valid!"}
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (13.2ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  [1m[36mBooking Load (6.6ms)[0m  [1m[34mSELECT `bookings`.* FROM `bookings`[0m
+  [1m[36mCACHE Booking Load (0.0ms)[0m  [1m[34mSELECT `bookings`.* FROM `bookings`[0m
+  [1m[36mUserGroup Load (0.3ms)[0m  [1m[34mSELECT  `user_groups`.* FROM `user_groups` WHERE `user_groups`.`id` = 1 LIMIT 1[0m
+  [1m[36mCACHE Booking Load (0.0ms)[0m  [1m[34mSELECT `bookings`.* FROM `bookings`[0m
+  Rendered home/index.html.erb within layouts/application (145.0ms)
+Completed 200 OK in 408ms (Views: 353.5ms | ActiveRecord: 52.0ms)
+
+
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-16 10:10:26 +0100
+CardChannel stopped streaming from card_channel
+FingerprintChannel stopped streaming from fingerprint_channel
+FaceChannel stopped streaming from face_channel
+Started GET "/cable" for 127.0.0.1 at 2018-05-16 10:10:26 +0100
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-05-16 10:10:26 +0100
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+CardChannel is transmitting the subscription confirmation
+CardChannel is streaming from card_channel
+FaceChannel is transmitting the subscription confirmation
+FaceChannel is streaming from face_channel
+FingerprintChannel is transmitting the subscription confirmation
+FingerprintChannel is streaming from fingerprint_channel

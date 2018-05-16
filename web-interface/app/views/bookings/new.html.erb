@@ -1,0 +1,133 @@
+<script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+
+ 
+<!-- Include Date Range Picker -->
+<script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
+<%= render partial: "menubar" %>
+<div class="ui container">
+	<div class="ui  segment header">
+		<h2>Computer Science lab</h2>
+		<h4>Make booking</h4>
+	</div>
+	<%= form_tag("/bookings", method: "post") do %>
+	<div class="ui segment">
+		<div class="ui form">
+			
+			<div class="ui field">
+				<div><label>Time between: </label></div>
+				<input type="text" name="timepicker" value=""/>
+				<input name="start" type="hidden"/>
+				<input name="end" type="hidden"/>
+			</div>
+			<div class="ui field">
+				<input name="permissions" type="hidden"/>
+				<label>Permissions</label>
+				<select class="ui fluid permissions dropdown">
+					<option value="">Select option</option>
+					<option value="default">Default</option>
+					<option value="non-anonymous">Default - Non Anonymous</option>
+					<option value="exam-style">Exam style</option>
+					<option value="staff-only">Staff only</option>
+				</select>
+			</div>
+			<div class="ui field">
+				<label>Student group</label>
+				<input type="hidden" name="user-group">
+				<select class="ui fluid user-group dropdown">
+					<option value="">Student group</option>
+					<% UserGroup.all.each do |user_group| %>
+						<option value="<%= user_group.id %>"><%= user_group.name %></option>
+					<% end %>
+				</select>
+			</div>
+			<div class="ui field">
+				<div class="ui recurring checkbox">
+					<input type="checkbox" name="example">
+					<input type="hidden" name="recurring" value="-1">
+					<label>Make this a recurring booking</label>
+				</div>
+			</div>
+			<div class="ui inline fields recurring segment">
+				<div class="ui inline field">
+					<input type="hidden" name="frequency-peroid">
+					<label>Every</label>
+					<select class="ui search peroid dropdown">
+					  <option value=""></option>
+					  <option value="day">Day</option>
+					  <option value="week">Week</option>
+					  <option value="month">Month</option>
+					</select>
+				</div>
+
+				<div class="ui inline field">
+					<label>For</label>
+					<input style="width:5em" type="number" name="frequency-number"/>
+					<label class="peroid-of-time"></label>
+
+				</div>
+			</div>
+			<div class="ui submit field">
+				<button type="submit" class="ui red button">Submit</button>
+			</div>
+
+		</div>
+	</div>
+	
+	<% end %>
+</div>
+<script>
+	$('input[name=timepicker]').daterangepicker({
+		autoUpdateInput: false,
+	    "timePicker": true,
+	    "startDate": "<%= Date.today.strftime('%m/%d/%y') %>",
+	    "endDate": "<%= Date.today.strftime('%m/%d/%y') %>",
+	    "buttonClasses": "ui tiny button",
+	    "applyClass": "green",
+	    "cancelClass": "red",
+	    "locale": {
+	        "format": 'MM/DD/YYYY h:mm A'
+	    }
+	}, function(start, end, label) {
+		$("input[name=start]").val(start.format('MM/DD/YYYY h:mm A'))
+		$("input[name=end]").val(end.format('MM/DD/YYYY h:mm A'))
+	});
+	$('input[name="timepicker"]').on('apply.daterangepicker', function(ev, picker) {
+      $(this).val(picker.startDate.format('MM/DD/YYYY h:mm A') + ' - ' + picker.endDate.format('MM/DD/YYYY h:mm A'));
+	});
+
+	  $('input[name="timepicker"]').on('cancel.daterangepicker', function(ev, picker) {
+	      $(this).val('');
+	});
+	$(".dropdown").dropdown()
+	$(".checkbox").checkbox()
+	$(".recurring.segment").toggle()
+	$(".recurring.checkbox").on("click", function(x) {
+		$("input[name=recurring]").val($("input[name=recurring]").val() * -1)
+		$(".recurring.segment").toggle()
+	})
+	$(".peroid.selection").change(function() {
+		$(".peroid-of-time").text($(".peroid.selection").dropdown("get value") + "s")
+		$("input[name=frequency-peroid]").val($(".peroid.selection").dropdown("get value"))
+	})
+	$(".permissions").change(function() {
+		$("input[name=permissions]").val($(".permissions").dropdown('get value'))
+	})
+	$(".user-group").change(function() {
+		$("input[name=user-group]").val($(".user-group").dropdown('get value'))
+	})
+	$('.ui.form')
+	  .form({
+	    fields: {
+	      timepicker     : 'empty',
+	      start   : 'empty',
+	      end : 'empty',
+	      "user-group" : 'empty',
+	      permissions   : ['minCount[2]', 'empty'],
+	      terms    : 'checked'
+	    }
+	  })
+	;
+	
+	
+</script>

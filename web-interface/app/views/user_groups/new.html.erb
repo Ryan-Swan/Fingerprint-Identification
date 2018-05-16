@@ -1,0 +1,34 @@
+<%= render partial: "bookings/menubar" %>
+<div class="ui container">
+	<div class="ui  segment header">
+		<h2>Computer Science lab</h2>
+		<h4>Create user group</h4>
+	</div>
+	<%= form_tag("/user_groups", method: "post") do %>
+	<div class="ui segment">
+		<div class="ui form" >
+			<div class="ui field">
+				<label>Group name</label>
+				<input name="name" type="text" />
+			</div>
+			<div class="ui field">
+				<input name="users" type="hidden" />
+				<label>Users</label>
+				<select class="ui fluid search users dropdown" multiple="">
+					<option value="">Select users</option>
+					<% User.all.each do |user| %>
+					<option value="<%= user.id %>"><%= user.email %></option>
+					<% end %>
+				</select>
+			</div>
+		</div>
+	</div>
+	<button type="submit" class="ui red button">Submit</button>
+	<% end %>
+</div>
+<script>
+	$(".dropdown").dropdown()
+	$(".users.dropdown").change(function() {
+		$("input[name=users]").val($(".users.dropdown").dropdown("get value").toString())
+	})
+</script>
